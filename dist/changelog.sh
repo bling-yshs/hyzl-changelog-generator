@@ -33,7 +33,7 @@ fi
 # we want it to disappear. If you quote it, it will go to git as an ""
 # and thats not a valid arg.
 log=$(git log "${base_ref}"..."${head_ref}" \
-  --pretty=format:"- [%h](http://github.com/${repo_url}/commit/%H) - %s" \
+  --pretty=format:"作者: %cn; 时间: %ci; 更新内容: %s" \
   ${extra_flags})
 
 if [ -z "$log" ];
